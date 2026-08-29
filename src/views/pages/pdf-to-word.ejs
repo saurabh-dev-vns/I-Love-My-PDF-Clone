@@ -1,0 +1,10 @@
+<section class="tool-page">
+  <h1>PDF to Word</h1>
+  <p class="note">Requires <code>LibreOffice</code> (soffice) installed on the server.</p>
+  <form action="/pdf-to-word" method="POST" enctype="multipart/form-data" class="upload-form">
+    <input type="file" name="file" id="file-input" accept="application/pdf" required>
+    <button type="submit">Convert to Word</button>
+  </form>
+
+  <div id="preview-list" class="preview-area"></div>
+</section>

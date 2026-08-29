@@ -1,0 +1,23 @@
+<section class="tool-page">
+  <h1>Split PDF</h1>
+  <p>Upload one PDF, then choose how you want to split it.</p>
+
+  <form action="/split" method="POST" enctype="multipart/form-data" class="upload-form">
+    <input type="file" name="file" id="file-input" accept="application/pdf" required>
+
+    <label>
+      <input type="radio" name="mode" value="range" checked>
+      Extract page range
+    </label>
+    <input type="text" name="range" placeholder="e.g. 1-3,5,7-9 (or click pages below)">
+
+    <label>
+      <input type="radio" name="mode" value="all">
+      Split every page into a separate file (zip)
+    </label>
+
+    <button type="submit">Split PDF</button>
+  </form>
+
+  <div id="preview-list" class="preview-area"></div>
+</section>

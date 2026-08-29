@@ -1,0 +1,11 @@
+<section class="tool-page">
+  <h1>Merge PDF</h1>
+  <p>Select 2 or more PDF files. They'll be merged in the order you select them.</p>
+
+  <form action="/merge" method="POST" enctype="multipart/form-data" class="upload-form" id="merge-form">
+    <input type="file" name="files" id="files-input" accept="application/pdf" multiple required>
+    <button type="submit">Merge PDFs</button>
+  </form>
+
+  <div id="preview-list" class="preview-area"></div>
+</section>

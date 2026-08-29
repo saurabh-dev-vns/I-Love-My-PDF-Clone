@@ -1,0 +1,11 @@
+<section class="tool-page">
+  <h1>Unlock PDF</h1>
+  <p class="note">Requires <code>qpdf</code> installed on the server.</p>
+  <form action="/unlock" method="POST" enctype="multipart/form-data" class="upload-form">
+    <input type="file" name="file" id="file-input" accept="application/pdf" required>
+    <input type="password" name="password" placeholder="Current password" required>
+    <button type="submit">Unlock PDF</button>
+  </form>
+
+  <div id="preview-list" class="preview-area"></div>
+</section>

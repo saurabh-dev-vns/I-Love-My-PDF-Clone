@@ -1,0 +1,14 @@
+<section class="hero">
+  <h1>Every PDF tool you need, in one place.</h1>
+  <p>Merge, split, rotate, watermark, compress and convert — all processed locally.</p>
+</section>
+
+<section class="tool-grid">
+  <% tools.forEach(tool => { %>
+    <a href="<%= tool.route %>" class="tool-card">
+      <div class="tool-icon"><%= tool.icon %></div>
+      <h3><%= tool.title %></h3>
+      <p><%= tool.desc %></p>
+    </a>
+  <% }) %>
+</section>

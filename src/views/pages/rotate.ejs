@@ -1,0 +1,14 @@
+<section class="tool-page">
+  <h1>Rotate PDF</h1>
+  <form action="/rotate" method="POST" enctype="multipart/form-data" class="upload-form">
+    <input type="file" name="file" id="file-input" accept="application/pdf" required>
+    <select name="angle" required>
+      <option value="90">Rotate 90°</option>
+      <option value="180">Rotate 180°</option>
+      <option value="270">Rotate 270°</option>
+    </select>
+    <button type="submit">Rotate PDF</button>
+  </form>
+
+  <div id="preview-list" class="preview-area"></div>
+</section>

@@ -1,0 +1,11 @@
+node_modules
+.env
+.git
+storage/uploads/*
+storage/outputs/*
+storage/temp/*
+!storage/uploads/.gitkeep
+!storage/outputs/.gitkeep
+!storage/temp/.gitkeep
+deploy
+*.log

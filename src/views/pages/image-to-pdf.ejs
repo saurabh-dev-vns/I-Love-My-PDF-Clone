@@ -1,0 +1,10 @@
+<section class="tool-page">
+  <h1>Image to PDF</h1>
+  <p>Upload one or more images (JPG, PNG, WEBP). Each becomes one page, in the order selected.</p>
+  <form action="/image-to-pdf" method="POST" enctype="multipart/form-data" class="upload-form" id="image-form">
+    <input type="file" name="files" id="files-input" accept="image/*" multiple required>
+    <button type="submit">Convert to PDF</button>
+  </form>
+
+  <div id="preview-list" class="preview-area"></div>
+</section>

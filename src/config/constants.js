@@ -1,0 +1,92 @@
+// Central place to register every tool/module the platform offers.
+// The homepage and nav menu are generated FROM this list, so adding a
+// new feature module later just means: add its route + add an entry here.
+
+module.exports = {
+  ALLOWED_PDF_MIME: ['application/pdf'],
+  ALLOWED_IMAGE_MIME: ['image/png', 'image/jpeg', 'image/jpg', 'image/webp'],
+
+  TOOLS: [
+    {
+      id: 'merge',
+      title: 'Merge PDF',
+      desc: 'Combine multiple PDFs into a single file, in the order you choose.',
+      icon: '🧩',
+      route: '/merge',
+      accepts: 'application/pdf',
+      multiple: true,
+    },
+    {
+      id: 'split',
+      title: 'Split PDF',
+      desc: 'Extract specific pages or split a PDF into separate files.',
+      icon: '✂️',
+      route: '/split',
+      accepts: 'application/pdf',
+      multiple: false,
+    },
+    {
+      id: 'rotate',
+      title: 'Rotate PDF',
+      desc: 'Rotate one or all pages by 90°, 180°, or 270°.',
+      icon: '🔄',
+      route: '/rotate',
+      accepts: 'application/pdf',
+      multiple: false,
+    },
+    {
+      id: 'watermark',
+      title: 'Add Watermark',
+      desc: 'Stamp a text watermark across every page.',
+      icon: '💧',
+      route: '/watermark',
+      accepts: 'application/pdf',
+      multiple: false,
+    },
+    {
+      id: 'compress',
+      title: 'Compress PDF',
+      desc: 'Reduce PDF file size by re-encoding and stripping metadata.',
+      icon: '📦',
+      route: '/compress',
+      accepts: 'application/pdf',
+      multiple: false,
+    },
+    {
+      id: 'image-to-pdf',
+      title: 'Image to PDF',
+      desc: 'Convert one or more JPG/PNG images into a single PDF.',
+      icon: '🖼️',
+      route: '/image-to-pdf',
+      accepts: 'image/*',
+      multiple: true,
+    },
+    {
+      id: 'protect',
+      title: 'Protect PDF',
+      desc: 'Add a password to a PDF (requires qpdf installed on system).',
+      icon: '🔒',
+      route: '/protect',
+      accepts: 'application/pdf',
+      multiple: false,
+    },
+    {
+      id: 'unlock',
+      title: 'Unlock PDF',
+      desc: 'Remove a known password from a PDF (requires qpdf installed).',
+      icon: '🔓',
+      route: '/unlock',
+      accepts: 'application/pdf',
+      multiple: false,
+    },
+    {
+      id: 'pdf-to-word',
+      title: 'PDF to Word',
+      desc: 'Convert PDF to editable .docx (requires LibreOffice installed).',
+      icon: '📄',
+      route: '/pdf-to-word',
+      accepts: 'application/pdf',
+      multiple: false,
+    },
+  ],
+};

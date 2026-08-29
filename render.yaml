@@ -1,0 +1,16 @@
+# Render "Blueprint" — lets Render auto-detect the Dockerfile and correct
+# settings when you connect this repo, instead of configuring by hand.
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: pdf-toolkit
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: FILE_TTL_MINUTES
+        value: 60
+    healthCheckPath: /

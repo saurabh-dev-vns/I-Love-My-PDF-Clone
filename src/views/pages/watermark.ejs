@@ -1,0 +1,10 @@
+<section class="tool-page">
+  <h1>Add Watermark</h1>
+  <form action="/watermark" method="POST" enctype="multipart/form-data" class="upload-form">
+    <input type="file" name="file" id="file-input" accept="application/pdf" required>
+    <input type="text" name="text" placeholder="Watermark text (e.g. CONFIDENTIAL)" required>
+    <button type="submit">Add Watermark</button>
+  </form>
+
+  <div id="preview-list" class="preview-area"></div>
+</section>
